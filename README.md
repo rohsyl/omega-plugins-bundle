@@ -1,10 +1,14 @@
-# omega-plugin-skeleton
-Skeleton for creating template for OmegaCMS Eros
+# Omega Plugins Bundle
+
+This package contains some basics plugins for Omega cms
 
 ## Getting started 
 
-Edit files and replace [PluginName] by the name of your plugin.
+This package is shipped with `rohsyl\omega-core`.
 
-## Documentation
+You can manually install plugins of this package with the following command :
+```
+php artisan omega-plugins-bundle:install
+```
 
-TODO
+Enjoy !
