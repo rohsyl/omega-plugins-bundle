@@ -2,6 +2,15 @@
 
 This package contains some basics plugins for Omega cms
 
+Available plugins :
+- title
+- text
+- banner
+- html 
+- redirect
+
+> These plugins provide components to help the user build the content of pages.
+
 ## Getting started 
 
 This package is shipped with `rohsyl\omega-core`.
