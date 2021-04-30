@@ -5,6 +5,7 @@ use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as SP;
 use rohsyl\OmegaCore\Utils\Common\Facades\Plugin as PluginManager;
+use rohsyl\OmegaPlugin\Bundle\Plugins\PluginBanner;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginHtml;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginRedirect;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginText;
@@ -40,5 +41,6 @@ class ServiceProvider extends SP
         PluginManager::register(new PluginRedirect());
         PluginManager::register(new PluginTitle());
         PluginManager::register(new PluginHtml());
+        PluginManager::register(new PluginBanner());
     }
 }
