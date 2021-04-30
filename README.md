@@ -1,6 +1,6 @@
 # Omega Plugins Bundle
 
-This package contains some basics plugins for Omega cms
+This package contains some basics plugins for Omega CMS
 
 Available plugins :
 - title
