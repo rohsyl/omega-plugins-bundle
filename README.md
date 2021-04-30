@@ -13,7 +13,7 @@ Available plugins :
 
 ## Getting started 
 
-This package is shipped with `rohsyl\omega-core`.
+This package is shipped with `rohsyl/omega-core`.
 
 You can manually install plugins of this package with the following command :
 ```
