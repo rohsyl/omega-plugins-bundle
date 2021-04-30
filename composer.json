@@ -1,6 +1,6 @@
 {
-    "name": "rohsyl/omega-plugin-skeleton",
-    "description": "OmegaCMS Plugin Skeleton",
+    "name": "rohsyl/omega-plugins-bundle",
+    "description": "OmegaCMS Plugins Bundle",
     "license": "GPL-3.0",
     "authors": [
         {
@@ -8,7 +8,8 @@
             "email": "syzin12@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "^7.4|^8.0",
         "illuminate/auth": "^8.0",
@@ -19,18 +20,26 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^8.0"
+        "phpunit/phpunit": "^8.0",
+        "rohsyl/omega-core": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "rohsyl\\OmegaPlugin\\[PluginName]\\": "src"
+            "rohsyl\\OmegaPlugin\\Bundle\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "rohsyl\\OmegaPlugin\\[PluginName]\\ServiceProvider"
+                "rohsyl\\OmegaPlugin\\Bundle\\ServiceProvider"
             ]
         }
-    }
+    },
+
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../omega-core"
+        }
+    ]
 }

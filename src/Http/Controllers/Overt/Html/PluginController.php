@@ -1,5 +1,5 @@
 <?php
-namespace rohsyl\OmegaPlugin\[PluginName]\Http\Controllers\Overt;
+namespace rohsyl\OmegaPlugin\Bundle\Http\Controllers\Overt\Html;
 
 use rohsyl\OmegaCore\Utils\Common\Plugin\Controllers\OvertPluginController as Controller;
 
@@ -7,6 +7,6 @@ class PluginController extends Controller
 {
     public function display($param, $data) {
 
-        return view('omega-plugin-[PluginName]::overt.display');
+        return $this->view('omega-plugin-bundle::overt.html.display')->with($data);
     }
 }
