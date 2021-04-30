@@ -5,6 +5,7 @@ use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as SP;
 use rohsyl\OmegaCore\Utils\Common\Facades\Plugin as PluginManager;
+use rohsyl\OmegaPlugin\Bundle\Commands\PluginBundleInstallCommand;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginBanner;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginHtml;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginRedirect;
@@ -14,11 +15,18 @@ use rohsyl\OmegaPlugin\Bundle\Plugins\PluginTitle;
 class ServiceProvider extends SP
 {
 
+
     public function register() {
 
     }
 
     public function boot() {
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                PluginBundleInstallCommand::class,
+            ]);
+        }
 
         $this->publishes([
             __DIR__.'/../resources/views/overt' => resource_path('views/vendor/omega-plugin-bundle/overt'),
@@ -37,10 +45,7 @@ class ServiceProvider extends SP
         // load views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'omega-plugin-bundle');
 
-        PluginManager::register(new PluginText());
-        PluginManager::register(new PluginRedirect());
-        PluginManager::register(new PluginTitle());
-        PluginManager::register(new PluginHtml());
-        PluginManager::register(new PluginBanner());
+        PluginRegistar::register();
+
     }
 }
