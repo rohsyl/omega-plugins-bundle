@@ -8,6 +8,7 @@ use rohsyl\OmegaCore\Utils\Common\Plugin\Form\PluginFormFactory;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Plugin;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Type\DropDown\DropDown;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Type\TextSimple\TextSimple;
+use rohsyl\OmegaPlugin\Bundle\Http\Controllers\Overt\Title\PluginController;
 
 class PluginTitle extends Plugin
 {
@@ -48,6 +49,6 @@ class PluginTitle extends Plugin
 
     function overtController(): string
     {
-        // TODO: Implement overtController() method.
+        return PluginController::class;
     }
 }
