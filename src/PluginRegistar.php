@@ -8,6 +8,7 @@ use rohsyl\OmegaCore\Utils\Common\Facades\Plugin as PluginManager;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Plugin;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginBanner;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginHtml;
+use rohsyl\OmegaPlugin\Bundle\Plugins\PluginImage;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginRedirect;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginText;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginTitle;
@@ -20,6 +21,7 @@ class PluginRegistar
         PluginTitle::class,
         PluginHtml::class,
         PluginBanner::class,
+        PluginImage::class,
     ];
 
     public static function getRegisteredPlugins() {
