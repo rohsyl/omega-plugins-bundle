@@ -21,12 +21,9 @@ class ServiceProvider extends SP
     }
 
     public function boot() {
-
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                PluginBundleInstallCommand::class,
-            ]);
-        }
+        $this->commands([
+            PluginBundleInstallCommand::class,
+        ]);
 
         $this->publishes([
             __DIR__.'/../resources/views/overt' => resource_path('views/vendor/omega-plugin-bundle/overt'),

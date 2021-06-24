@@ -3,6 +3,7 @@ namespace rohsyl\OmegaPlugin\Bundle\Plugins;
 
 use rohsyl\OmegaCore\Utils\Common\Plugin\Form\PluginFormFactory;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Plugin;
+use rohsyl\OmegaCore\Utils\Common\Plugin\Type\TextRich\TextRich;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Type\TextSimple\TextSimple;
 use rohsyl\OmegaPlugin\Bundle\Http\Controllers\Overt\Text\PluginController;
 
@@ -29,7 +30,7 @@ class PluginText extends Plugin
 
         $this->makeForm(function(PluginFormFactory $builder) {
             $builder->form('Text', true, true);
-            $builder->entry('text', TextSimple::class, null, 'Text', null, 0, false);
+            $builder->entry('text', TextRich::class, null, 'Text', null, 0, false);
         });
 
     }
