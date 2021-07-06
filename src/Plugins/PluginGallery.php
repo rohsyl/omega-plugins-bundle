@@ -36,7 +36,7 @@ class PluginGallery extends Plugin
         $param = [
             'multiple' => true,
             'preview' => true,
-            'type' => [Media::MT_PICTURE, Media::MT_VIDEO, Media::MT_VIDEO_EXT, Media::MT_DOCUMENT]
+            'type' => [Media::MT_PICTURE, Media::MT_VIDEO, Media::MT_VIDEO_EXT, Media::MT_DOCUMENT, Media::MT_FOLDER]
         ];
         $this->makeForm(function(PluginFormFactory $builder) use ($param) {
             $builder->form('Gallery', true, true);
