@@ -21,7 +21,7 @@
     "require-dev": {
         "orchestra/testbench": "^6.0",
         "phpunit/phpunit": "^8.0",
-        "rohsyl/omega-core": "dev-master"
+        "rohsyl/omega-core": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -34,12 +34,5 @@
                 "rohsyl\\OmegaPlugin\\Bundle\\ServiceProvider"
             ]
         }
-    },
-
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../omega-core"
-        }
-    ]
+    }
 }
