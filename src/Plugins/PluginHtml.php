@@ -7,6 +7,7 @@ namespace rohsyl\OmegaPlugin\Bundle\Plugins;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Form\PluginFormFactory;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Plugin;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Type\HtmlEditor\HtmlEditor;
+use rohsyl\OmegaPlugin\Bundle\Http\Controllers\Overt\Html\PluginController;
 
 class PluginHtml extends Plugin
 {
@@ -36,6 +37,6 @@ class PluginHtml extends Plugin
 
     function overtController(): string
     {
-        // TODO: Implement overtController() method.
+        return PluginController::class;
     }
 }
