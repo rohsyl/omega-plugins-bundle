@@ -4,6 +4,7 @@ namespace rohsyl\OmegaPlugin\Bundle\Plugins;
 use rohsyl\OmegaCore\Models\Media;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Form\PluginFormFactory;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Plugin;
+use rohsyl\OmegaCore\Utils\Common\Plugin\Type\Checkbox\Checkbox;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Type\MediaChooser\MediaChooser;
 use rohsyl\OmegaPlugin\Bundle\Http\Controllers\Overt\Gallery\PluginController;
 
@@ -40,7 +41,8 @@ class PluginGallery extends Plugin
         ];
         $this->makeForm(function(PluginFormFactory $builder) use ($param) {
             $builder->form('Gallery', true, true);
-            $builder->entry('items', MediaChooser::class, $param, 'Image', null, 0, false);
+            $builder->entry('items', MediaChooser::class, $param, 'Pictures', null, 0, false);
+            $builder->entry('hide_titles', Checkbox::class, ['checked' => false], 'Hide title and description', 'Check this to hide title and description of each pictures on the gallery', 1, false);
         });
 
     }
