@@ -38,7 +38,7 @@ class PluginController extends Controller
         }
 
         $data['isAntispam'] = $isAntispam;
-        $data['key_site'] = $contact_config['key_site'];
+        $data['key_site'] = $contact_config ? $contact_config['key_site'] ?? null : null;
         return $this->view('omega-plugin-bundle::overt.contact.display')->with($data);
     }
 
