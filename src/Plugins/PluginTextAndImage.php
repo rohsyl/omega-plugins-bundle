@@ -49,7 +49,7 @@ class PluginTextAndImage extends Plugin
             $builder->form('TextAndImage', true, true);
             $builder->entry('text', TextRich::class, null, 'Text', null, 0, false);
             $builder->entry('url', MediaChooser::class, $param, 'Image', null, 0, false);
-            $builder->entry('level', DropDown::class, $positionParam, 'Position', 'The position of the image to the text', 2, false);
+            $builder->entry('position', DropDown::class, $positionParam, 'Position', 'The position of the image to the text', 2, false);
         });
 
     }
