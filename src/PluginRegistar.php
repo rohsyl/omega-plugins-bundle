@@ -15,6 +15,7 @@ use rohsyl\OmegaPlugin\Bundle\Plugins\PluginImage;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginRedirect;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginTeaser;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginText;
+use rohsyl\OmegaPlugin\Bundle\Plugins\PluginTextAndImage;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginTitle;
 
 class PluginRegistar
@@ -30,6 +31,7 @@ class PluginRegistar
         PluginTeaser::class,
         PluginDividedContent::class,
         PluginContact::class,
+        PluginTextAndImage::class,
     ];
 
     public static function getRegisteredPlugins() {
