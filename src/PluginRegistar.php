@@ -8,6 +8,7 @@ use rohsyl\OmegaCore\Utils\Common\Facades\Plugin as PluginManager;
 use rohsyl\OmegaCore\Utils\Common\Plugin\Plugin;
 use rohsyl\OmegaPlugin\Bundle\Plugins\DividedContent\PluginDividedContent;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginBanner;
+use rohsyl\OmegaPlugin\Bundle\Plugins\PluginContact;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginGallery;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginHtml;
 use rohsyl\OmegaPlugin\Bundle\Plugins\PluginImage;
@@ -29,6 +30,7 @@ class PluginRegistar
         PluginGallery::class,
         PluginTeaser::class,
         PluginDividedContent::class,
+        PluginContact::class,
         PluginTextAndImage::class,
     ];
 
