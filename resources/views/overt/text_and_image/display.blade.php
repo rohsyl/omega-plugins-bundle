@@ -23,23 +23,23 @@
         @endif
     @elseif($position == $LEFT)
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 @if(isset($url))
                     <div>
                         <img src="{{ $url->url }}" title="{{ $url->name }}" width="100%" />
                     </div>
                 @endif
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 {!! @$text !!}
             </div>
         </div>
     @elseif($position == $RIGHT)
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 {!! @$text !!}
             </div>
-            <div class="col-12">
+            <div class="col-12 col-sm-6">
                 @if(isset($url))
                     <div>
                         <img src="{{ $url->url }}" title="{{ $url->name }}" width="100%" />
