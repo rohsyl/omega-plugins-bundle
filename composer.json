@@ -11,17 +11,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/auth": "^8.0",
-        "illuminate/container": "^8.0",
-        "illuminate/contracts": "^8.0",
-        "illuminate/database": "^8.0",
+        "php": ">=8.0.2",
+        "illuminate/auth": "^9.0",
+        "illuminate/container": "^9.0",
+        "illuminate/contracts": "^9.0",
+        "illuminate/database": "^9.0",
         "laravelcollective/html": "^6.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^8.0",
-        "rohsyl/omega-core": "^1.0"
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
